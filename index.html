@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOOOHU | GML - The Poetry of Walking</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #888;
+            --serif: "Times New Roman", "Source Han Serif CN", serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--text); font-family: "Inter", "Helvetica Neue", sans-serif; }
+
+        /* 顶部Logo */
+        nav {
+            padding: 40px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.9);
+            z-index: 1000;
+        }
+        .logo-img { height: 50px; margin-bottom: 10px; }
+        .logo-text { font-family: var(--serif); font-size: 24px; letter-spacing: 8px; font-weight: bold; }
+
+        /* 杂志风叙事布局 */
+        .story-container { padding: 100px 10%; }
+        
+        .section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 180px; /* 巨大的间距产生高级感 */
+            gap: 10%;
+        }
+
+        /* 奇数行：左图右诗 */
+        .section:nth-child(odd) { flex-direction: row; }
+        /* 偶数行：右图左诗 */
+        .section:nth-child(even) { flex-direction: row-reverse; }
+
+        .image-box { flex: 1.2; overflow: hidden; }
+        .image-box img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            transition: 1.5s ease;
+        }
+        .image-box:hover img { transform: scale(1.03); }
+
+        .text-box { flex: 1; padding: 40px; }
+        .poem-en { 
+            font-family: var(--serif); 
+            font-size: 28px; 
+            line-height: 1.4; 
+            font-style: italic; 
+            margin-bottom: 20px; 
+            color: #333;
+        }
+        .poem-zh { 
+            font-size: 14px; 
+            letter-spacing: 3px; 
+            color: var(--accent); 
+            font-weight: 300;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .section, .section:nth-child(even) { flex-direction: column; margin-bottom: 80px; }
+            .text-box { padding: 30px 0; text-align: center; }
+            .poem-en { font-size: 22px; }
+            .story-container { padding: 50px 8%; }
+        }
+
+        /* 联系信息卡片 */
+        .contact-final {
+            background: #fcfcfc;
+            padding: 100px 10%;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        .contact-final h2 { font-family: var(--serif); font-size: 36px; margin-bottom: 30px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; }
+        .addr-text { font-size: 14px; color: #666; line-height: 2; }
+
+        footer { padding: 60px; text-align: center; font-size: 10px; color: #ccc; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <img src="images/image.png" class="logo-img" alt="WOOOHU">
+    <div class="logo-text">WOOOHU</div>
+</nav>
+
+<div class="story-container" id="story-grid">
+    </div>
+
+<section class="contact-final">
+    <h2>Connect & Visit</h2>
+    <div class="contact-grid">
+        <div>
+            <p style="font-weight: bold; margin-bottom: 10px;">GLOBAL CONTACT</p>
+            <p class="addr-text">
+                WeChat/WhatsApp: +86 136 1299 3822<br>
+                Email: boehner@qq.com
+            </p>
+        </div>
+        <div>
+            <p style="font-weight: bold; margin-bottom: 10px;">HEADQUARTERS</p>
+            <p class="addr-text">
+                广东省揭阳市榕城区仙桥街道淇美工业区高美伦鞋业<br>
+                Qimei Industrial Zone, Jieyang, Guangdong, China
+            </p>
+        </div>
+        <div>
+            <p style="font-weight: bold; margin-bottom: 10px;">COOPERATION</p>
+            <p class="addr-text">
+                以上仅为部分款式预览，欢迎联系索取完整画册或到厂参观。<br>
+                Contact us for full catalog or factory visit appointments.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 WOOOHU 高美伦 | FOCUS ON STYLISH WOMEN'S FASHION
+</footer>
+
+<script>
+    // 诗词库
+    const poems = [
+        { en: "To walk in beauty, like the night.", zh: "步履间，尽是夜色之美。" },
+        { en: "Free your steps, find your soul.", zh: "释怀双足，探寻灵魂。" },
+        { en: "Every step is a new beginning.", zh: "每一步，都是全新的序章。" },
+        { en: "Elegance is the only beauty that never fades.", zh: "优雅，是永不褪色的美。" },
+        { en: "Walking with confidence and grace.", zh: "怀揣自信，从容迈步。" },
+        { en: "The world is at your feet.", zh: "世界，就在你脚下。" },
+        { en: "Style is a way to say who you are.", zh: "风格，是无需言语的自我介绍。" },
+        { en: "Comfort meets modern aesthetics.", zh: "当舒适邂逅现代美学。" },
+        { en: "Crafted for the sophisticated woman.", zh: "为精致女性倾力打造。" },
+        { en: "Simple details, extraordinary charm.", zh: "简约细节，非凡魅力。" }
+    ];
+
+    const container = document.getElementById('story-grid');
+    
+    // 生成25个部分
+    for (let i = 1; i <= 25; i++) {
+        const poem = poems[(i-1) % poems.length];
+        const section = document.createElement('div');
+        section.className = 'section';
+        
+        section.innerHTML = `
+            <div class="image-box">
+                <img src="images/${i}.jpg" alt="WOOOHU Collection">
+            </div>
+            <div class="text-box">
+                <p class="poem-en">${poem.en}</p>
+                <p class="poem-zh">${poem.zh}</p>
+            </div>
+        `;
+        container.appendChild(section);
+    }
+</script>
+
+</body>
+</html>
