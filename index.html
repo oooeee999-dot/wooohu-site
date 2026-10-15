@@ -2,14 +2,12 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="WOOOHU (Gaomeilun) - 10 years of expertise in fashion women's shoes and minimalist sandals. Premier sandals manufacturer in Jieyang offering chic, comfortable slides and mules for global boutique brands.">
     <title>WOOOHU | 高美伦 </title>
     
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
-    
-    <style>
-        <meta name="description" content="WOOOHU (Gaomeilun) - Premier women's fashion sandals manufacturer from Jieyang, China. Specializing in minimalist, stylish slides for Southeast Asian and global markets. Visit our factory for wholesale collection.">
 <meta name="keywords" content="WOOOHU, Gaomeilun, Women Sandals Manufacturer, Fashion Slides Wholesale, Jieyang Footwear Factory, China Sandals Supplier, Southeast Asia Fashion Shoes">
 <meta name="author" content="WOOOHU 高美伦">
 
@@ -48,6 +46,7 @@
   }
 }
 </script>
+    <style>
         :root {
             --bg: #ffffff;
             --text: #1a1a1a;
@@ -132,6 +131,40 @@
         .addr-text { font-size: 14px; color: #666; line-height: 2; }
 
         footer { padding: 60px; text-align: center; font-size: 10px; color: #ccc; letter-spacing: 2px; }
+        .contact-shortcuts {
+            position: fixed;
+            right: max(24px, env(safe-area-inset-right));
+            top: max(24px, env(safe-area-inset-top));
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .whatsapp-contact {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            padding: 6px 12px;
+            border: 1px solid #dededb;
+            border-radius: 999px;
+            background: rgba(255,255,255,.96);
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.4;
+            box-shadow: 0 2px 10px rgba(0,0,0,.04);
+        }
+        .whatsapp-contact:first-child { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+        .whatsapp-contact strong { font-weight: 500; }
+        .whatsapp-contact small { display: none; }
+        .whatsapp-contact:hover { background: #eee; color: #1a1a1a; }
+        .whatsapp-contact:focus-visible { outline: 3px solid #128c7e; outline-offset: 4px; }
+        @media (max-width: 768px) {
+            .contact-shortcuts { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); gap: 6px; }
+            .whatsapp-contact { min-height: 44px; padding: 6px 10px; font-size: 11px; }
+            nav { padding-top: 76px; }
+        }
     </style>
 </head>
 <body>
@@ -151,7 +184,7 @@
             <p style="font-weight: bold; margin-bottom: 10px;">GLOBAL CONTACT</p>
             <p class="addr-text">
                 WeChat/WhatsApp: +86 136 1299 3822<br>
-                Email: boehner@qq.com
+                Email: <a href="mailto:boehnerhuang@gmail.com">boehnerhuang@gmail.com</a>
             </p>
         </div>
         <div>
@@ -220,5 +253,9 @@
     }
 </script>
 
+<aside class="contact-shortcuts" aria-label="Contact WOOOHU">
+<a class="whatsapp-contact" href="https://wa.me/8613612993822?text=Hi%20WOOOHU%2C%20I%20found%20your%20products%20on%20your%20website.%20Could%20you%20share%20your%20catalog%20and%20wholesale%20information%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat with WOOOHU on WhatsApp (opens in a new tab)"><strong>WhatsApp</strong><small>Chat with us · 联系我们</small></a>
+<a class="whatsapp-contact" href="mailto:boehnerhuang@gmail.com" aria-label="Email WOOOHU at boehnerhuang@gmail.com"><strong>Email</strong><small>Send an inquiry</small></a>
+</aside>
 </body>
 </html>
