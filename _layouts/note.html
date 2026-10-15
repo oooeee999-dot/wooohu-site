@@ -1,0 +1,15 @@
+---
+layout: journal
+---
+<article>
+  <a class="back" href="{{ '/blog/' | relative_url }}">← 关于脚的手记 / All notes</a>
+  <header class="article-header">
+    <p class="eyebrow">NOTES ON FEET</p>
+    <h1>{{ page.title | escape }}</h1>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+    <span class="author">{{ page.author | default: 'WOOOHU' | escape }}</span>
+  </header>
+  <div class="prose">{{ content }}</div>
+  <div class="tags">{% for tag in page.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div>
+  <div class="article-end"><p>你对双脚有什么观察？欢迎与我们分享。</p><a href="mailto:boehnerhuang@gmail.com?subject={{ page.title | uri_escape }}">写信给我们 ↗</a></div>
+</article>

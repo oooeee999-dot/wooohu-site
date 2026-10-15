@@ -1,0 +1,19 @@
+title: WOOOHU
+url: https://wooohu.com
+baseurl: ""
+timezone: Asia/Shanghai
+markdown: kramdown
+collections:
+  notes:
+    output: true
+    permalink: /blog/:name/
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+exclude:
+  - BLOG-GUIDE.md
+  - templates
+  - scripts

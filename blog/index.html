@@ -1,0 +1,14 @@
+---
+layout: journal
+title: Notes on Feet
+description: "Feet matter. 关于脚的手记。"
+---
+<section class="intro"><p class="eyebrow">WOOOHU JOURNAL</p><h1>Notes on Feet</h1><p class="subtitle">Feet matter.</p></section>
+<section aria-label="文章列表" class="notes-list">
+{% assign notes = site.notes | sort: 'date' | reverse %}
+{% assign published_count = 0 %}
+{% for note in notes %}{% unless note.draft %}{% assign published_count = published_count | plus: 1 %}
+<article class="note-card"><time datetime="{{ note.date | date: '%Y-%m-%d' }}">{{ note.date | date: '%Y.%m.%d' }}</time><h2><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a></h2><p>{{ note.description | escape }}</p><a class="read-more" href="{{ note.url | relative_url }}">阅读手记 / Read note ↗</a></article>
+{% endunless %}{% endfor %}
+{% if published_count == 0 %}<p>手记正在准备中。 / Notes coming soon.</p>{% endif %}
+</section>

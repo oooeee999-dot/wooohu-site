@@ -120,6 +120,9 @@
         }
 
         /* 联系信息卡片 */
+        html { scroll-behavior: smooth; }
+        #contact { scroll-margin-top: 160px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
         .contact-final {
             background: #fcfcfc;
             padding: 100px 10%;
@@ -139,7 +142,13 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            flex-wrap: wrap;
+            width: 280px;
+            justify-content: flex-end;
         }
+        .journal-entry { flex-basis: 100%; text-align: right; color: #555; font-size: 12px; padding: 7px 2px; text-decoration: none; }
+        .journal-entry:hover { text-decoration: underline; }
+        .journal-entry:focus-visible { outline: 2px solid #128c7e; outline-offset: 3px; }
         .whatsapp-contact {
             display: inline-flex;
             align-items: center;
@@ -161,9 +170,12 @@
         .whatsapp-contact:hover { background: #eee; color: #1a1a1a; }
         .whatsapp-contact:focus-visible { outline: 3px solid #128c7e; outline-offset: 4px; }
         @media (max-width: 768px) {
-            .contact-shortcuts { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); gap: 6px; }
-            .whatsapp-contact { min-height: 44px; padding: 6px 10px; font-size: 11px; }
-            nav { padding-top: 76px; }
+            .contact-shortcuts { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); gap: 6px; width: min(280px, calc(100vw - 24px)); }
+            .journal-entry { flex-basis: 100%; text-align: right; color: #555; font-size: 12px; padding: 7px 2px; text-decoration: none; }
+        .journal-entry:hover { text-decoration: underline; }
+        .journal-entry:focus-visible { outline: 2px solid #128c7e; outline-offset: 3px; }
+        .whatsapp-contact { min-height: 44px; padding: 6px 10px; font-size: 11px; }
+            nav { padding-top: 108px; }
         }
     </style>
 </head>
@@ -177,7 +189,7 @@
 <div class="story-container" id="story-grid">
     </div>
 
-<section class="contact-final">
+<section class="contact-final" id="contact">
     <h2>Connect & Visit</h2>
     <div class="contact-grid">
         <div>
@@ -256,6 +268,8 @@
 <aside class="contact-shortcuts" aria-label="Contact WOOOHU">
 <a class="whatsapp-contact" href="https://wa.me/8613612993822?text=Hi%20WOOOHU%2C%20I%20found%20your%20products%20on%20your%20website.%20Could%20you%20share%20your%20catalog%20and%20wholesale%20information%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat with WOOOHU on WhatsApp (opens in a new tab)"><strong>WhatsApp</strong><small>Chat with us · 联系我们</small></a>
 <a class="whatsapp-contact" href="mailto:boehnerhuang@gmail.com" aria-label="Email WOOOHU at boehnerhuang@gmail.com"><strong>Email</strong><small>Send an inquiry</small></a>
+<a class="whatsapp-contact" href="#contact">Contact us</a>
+<a class="journal-entry" href="/blog/">Notes on Feet ↗</a>
 </aside>
 </body>
 </html>
