@@ -20,6 +20,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Generate product collections
+        run: node scripts/build-arrivals.cjs
       - name: Build Markdown and layouts
         uses: actions/jekyll-build-pages@v1
         with:

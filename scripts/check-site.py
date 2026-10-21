@@ -1,8 +1,18 @@
 """Check the real Jekyll output before publishing it."""
 from pathlib import Path
 from xml.etree import ElementTree
+import json
 
 root = Path('_site')
+models = json.loads(Path('_data/arrivals.json').read_text(encoding='utf-8'))
+assert (root / 'new-arrivals/index.html').is_file()
+for model in models:
+    model_id = model['id']
+    assert (root / 'new-arrivals' / model_id / 'index.html').is_file()
+    image_folder = Path('new-arrivals/images') / model_id
+    for source in image_folder.iterdir():
+        if source.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp'):
+            assert (root / source).read_bytes() == source.read_bytes(), f'Missing or changed image: {source}'
 for name in [f'images/{i}.jpg' for i in range(1, 26)] + ['images/image.png', 'images/favicon.png']:
     source = Path(name)
     generated = root / name

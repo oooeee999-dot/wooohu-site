@@ -71,6 +71,12 @@
         .logo-img { height: 50px; margin-bottom: 10px; }
         .logo-text { font-family: var(--serif); font-size: 24px; letter-spacing: 8px; font-weight: bold; }
 
+        .collection-nav { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 23px; font-size: 12px; letter-spacing: 1.4px; }
+        .collection-nav a { color: #555; text-decoration: none; padding: 8px 0; border-bottom: 1px solid transparent; }
+        .collection-nav a:hover { color: #111; border-bottom-color: #111; }
+        .collection-nav a:focus-visible { outline: 2px solid #555; outline-offset: 5px; }
+        .collection-nav span { color: #bbb; }
+        @media(max-width: 480px) { .collection-nav { gap: 16px; font-size: 11px; letter-spacing: 1px; } }
         /* 杂志风叙事布局 */
         .story-container { padding: 100px 10%; }
         
@@ -184,6 +190,7 @@
 <nav>
     <img src="images/image.png" class="logo-img" alt="WOOOHU">
     <div class="logo-text">WOOOHU·高美伦</div>
+    <div class="collection-nav" aria-label="Explore WOOOHU"><a href="new-arrivals/">New Arrivals</a><span aria-hidden="true">·</span><a href="blog/">Notes on Feet</a></div>
 </nav>
 
 <div class="story-container" id="story-grid">
@@ -269,7 +276,7 @@
 <a class="whatsapp-contact" href="https://wa.me/8613612993822?text=Hi%20WOOOHU%2C%20I%20found%20your%20products%20on%20your%20website.%20Could%20you%20share%20your%20catalog%20and%20wholesale%20information%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat with WOOOHU on WhatsApp (opens in a new tab)"><strong>WhatsApp</strong><small>Chat with us · 联系我们</small></a>
 <a class="whatsapp-contact" href="mailto:boehnerhuang@gmail.com" aria-label="Email WOOOHU at boehnerhuang@gmail.com"><strong>Email</strong><small>Send an inquiry</small></a>
 <a class="whatsapp-contact" href="#contact">Contact us</a>
-<a class="journal-entry" href="/blog/">Notes on Feet ↗</a>
+
 </aside>
 </body>
 </html>

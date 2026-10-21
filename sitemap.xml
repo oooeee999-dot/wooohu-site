@@ -5,6 +5,10 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>{{ '/' | absolute_url }}</loc></url>
 <url><loc>{{ '/blog/' | absolute_url }}</loc></url>
+<url><loc>{{ '/new-arrivals/' | absolute_url }}</loc></url>
+{% for model in site.data.arrivals %}
+<url><loc>{{ model.url | absolute_url }}</loc></url>
+{% endfor %}
 {% for note in site.notes %}{% unless note.draft %}
 <url><loc>{{ note.url | absolute_url }}</loc><lastmod>{{ note.updated | default: note.date | date_to_xmlschema }}</lastmod></url>
 {% endunless %}{% endfor %}
