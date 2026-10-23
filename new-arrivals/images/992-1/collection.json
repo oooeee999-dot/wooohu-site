@@ -1,0 +1,43 @@
+{
+  "title": "992-1",
+  "order": 5,
+  "cover": "4.jpg",
+  "images": [
+    {
+      "file": "4.jpg",
+      "en": "Take a little wonder along the way.",
+      "zh": "带一点好奇，走进沿途。",
+      "alt": "WOOOHU style 992-1, view 1"
+    },
+    {
+      "file": "8.jpg",
+      "en": "There is no hurry in a beautiful afternoon.",
+      "zh": "美好的午后，不必匆忙。",
+      "alt": "WOOOHU style 992-1, view 2"
+    },
+    {
+      "file": "12.jpg",
+      "en": "Make room for the small joys.",
+      "zh": "给小小的欢喜，留一点位置。",
+      "alt": "WOOOHU style 992-1, view 3"
+    },
+    {
+      "file": "15.jpg",
+      "en": "Every path has its own gentle rhythm.",
+      "zh": "每条路，都有自己的温柔节奏。",
+      "alt": "WOOOHU style 992-1, view 4"
+    },
+    {
+      "file": "17.jpg",
+      "en": "Let simple days become good memories.",
+      "zh": "让简单的日子，成为好回忆。",
+      "alt": "WOOOHU style 992-1, view 5"
+    },
+    {
+      "file": "18.jpg",
+      "en": "Some beauty asks only that we notice.",
+      "zh": "有些美，只等我们看见。",
+      "alt": "WOOOHU style 992-1, view 6"
+    }
+  ]
+}
