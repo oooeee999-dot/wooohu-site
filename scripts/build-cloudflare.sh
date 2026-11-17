@@ -6,5 +6,6 @@ export LC_ALL=C.UTF-8
 export RUBYOPT="${RUBYOPT:-} -EUTF-8:UTF-8"
 ruby -e 'abort "UTF-8 locale required" unless Encoding.find("filesystem") == Encoding::UTF_8; puts "Ruby filesystem encoding: #{Encoding.find("filesystem")}"'
 node scripts/build-arrivals.cjs
+node scripts/build-home-preview.cjs --publish
 JEKYLL_ENV=production bundle exec jekyll build --trace
 python3 scripts/check-site.py

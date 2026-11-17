@@ -4,6 +4,13 @@ from xml.etree import ElementTree
 import json
 
 root = Path('_site')
+home = (root / 'index.html').read_text(encoding='utf-8')
+assert 'noindex' not in home, 'Production homepage must remain indexable'
+assert 'assets/home-journal.css' in home and 'assets/home-journal.js' in home
+assert 'assets/analytics.js' in home, 'Production analytics missing'
+for asset in ('assets/home-journal.css', 'assets/home-journal.js'):
+    assert (root / asset).is_file(), f'Missing homepage asset: {asset}'
+assert not (root / 'home-preview.html').exists(), 'Local preview must not be published'
 models = json.loads(Path('_data/arrivals.json').read_text(encoding='utf-8'))
 assert (root / 'new-arrivals/index.html').is_file()
 for model in models:

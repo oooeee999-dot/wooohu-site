@@ -1,0 +1,36 @@
+/* Only the middle of home-preview.html. Existing header and footer stay intact. */
+.home-journal{max-width:1560px;margin:0 auto;padding:48px 5.5% 80px;color:#26352d}
+.journal-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:32px}
+.journal-overline{font-size:9px;line-height:1.7;letter-spacing:2px;color:#8b8c83;margin-bottom:13px}
+.journal-heading h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(25px,2.8vw,39px);font-weight:400;line-height:1.25;letter-spacing:-.6px}
+.journal-heading-note{font-size:11px;line-height:1.8;color:#8b8c83;text-align:right}
+.journal-waterfall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1px;column-gap:14px;align-items:start}
+.home-tile{min-width:0;overflow:hidden;border-radius:0;margin:0;grid-row-end:span 600}
+.tile-content{display:block;color:inherit;text-decoration:none}
+.tile-photo{position:relative;overflow:hidden;background:#f3f1ea}
+.tile-photo img{display:block;width:100%;height:auto;transition:transform .65s ease}
+.product-tile:hover img,.archive-tile:hover img{transform:scale(1.025)}
+.photo-link{position:absolute;right:10px;bottom:10px;background:rgba(255,255,255,.94);padding:7px 10px;border-radius:2px;font-size:9px;opacity:0;transition:opacity .2s}
+.home-tile:hover .photo-link,.home-tile:focus-within .photo-link{opacity:1}
+.tile-caption{padding:14px 12px 24px;background:#fff}
+.tile-meta{display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:15px;font-size:8px;line-height:1.6;letter-spacing:.7px;text-transform:uppercase;color:#777d72}
+.tile-meta span:last-child{white-space:nowrap;color:#3d4b40}
+.tile-caption h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(21px,1.9vw,29px);line-height:1.15;letter-spacing:-.6px;font-weight:400;margin:0 0 12px}
+.home-journal .tile-zh{font-family:"Microsoft YaHei",sans-serif;font-size:10px;font-weight:400;letter-spacing:.8px;line-height:1.9;color:#7d8175}
+.quote-tile .tile-content,.journal-tile .tile-content{min-height:380px;padding:26px 23px;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.quote-tile.sage .tile-content{min-height:440px}.quote-tile.ink .tile-content{min-height:330px}.journal-tile .tile-content{min-height:420px}
+.tile-kicker,.tile-foot{font-size:8px;line-height:1.7;letter-spacing:1.2px;color:#7b8172;display:block}
+.tile-poem{font-family:Georgia,"Times New Roman",serif;font-size:clamp(27px,2.4vw,37px);line-height:1.08;font-weight:400;letter-spacing:-.8px;margin:0 0 18px}
+.sand{background:#dec9b9}.sage{background:#dce1cf}.cream{background:#efebe0}.ink{background:#293c31;color:#fff}
+.ink .tile-kicker,.ink .tile-foot,.ink .tile-zh{color:#c9d2c4}
+.journal-summary{font-size:11px;line-height:1.8;margin-top:22px;color:#72786d}
+.archive-tile .tile-caption{background:#fff}
+.archive-tile .tile-kicker{margin-bottom:14px}
+.journal-end{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #e5e5dc;margin-top:35px;padding-top:24px;font-size:11px;color:#777e71}
+.journal-end a{color:#344c3c;text-decoration:none;border-bottom:1px solid #b7bfae;padding-bottom:5px}
+.home-tile a:focus-visible{outline:2px solid #344c3c;outline-offset:-3px}
+@media(min-width:1600px){.journal-waterfall{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:1050px){.journal-waterfall{grid-template-columns:repeat(3,minmax(0,1fr))}.home-journal{padding-left:4%;padding-right:4%}}
+@media(max-width:700px){.journal-waterfall{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:10px}.journal-heading{align-items:start}.journal-heading-note{display:none}.home-journal{padding:30px 4% 50px}.journal-heading h1{font-size:28px}.journal-overline{font-size:8px;letter-spacing:1.2px}.tile-caption{padding:14px 12px 18px}.tile-caption h2{font-size:22px}.tile-meta{font-size:7px;gap:7px}.tile-zh{font-size:9px!important}.tile-poem{font-size:28px}.quote-tile .tile-content,.journal-tile .tile-content{min-height:330px;padding:22px 16px}.quote-tile.sage .tile-content{min-height:360px}.journal-tile .tile-content{min-height:360px}.journal-summary{font-size:10px}.photo-link{display:none}.journal-end{font-size:10px}}
+@media(max-width:380px){.journal-waterfall{grid-template-columns:1fr}.tile-caption h2{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.tile-photo img,.photo-link{transition:none}}

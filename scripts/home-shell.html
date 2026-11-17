@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore women’s sandals and slides from WOOOHU (Gaomeilun), a footwear manufacturer in Jieyang, China. Contact us for wholesale and OEM/ODM enquiries.">
+    <title>WOOOHU | Women’s Sandals & Slides Manufacturer</title>
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://wooohu.com/">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="author" content="WOOOHU 高美伦">
+
+<meta property="og:title" content="WOOOHU | Women’s Sandals &amp; Slides Manufacturer">
+<meta property="og:description" content="Explore the 2026 Minimalist Footwear Collection. From factory to fashion.">
+<meta property="og:image" content="https://wooohu.com/images/1.jpg"> <meta property="og:url" content="https://wooohu.com">
+<meta property="og:type" content="website">
+
+<meta name="geo.region" content="CN-GD">
+<meta name="geo.placename" content="Jieyang">
+<meta name="geo.position" content="23.55;116.35">
+<meta name="ICBM" content="23.55, 116.35">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WOOOHU 高美伦鞋业",
+  "alternateName": "Gaomeilun Footwear",
+  "url": "https://wooohu.com",
+  "logo": "https://wooohu.com/images/image.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+86-136-1299-3822",
+    "contactType": "sales",
+    "availableLanguage": ["en", "Chinese"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Qimei Industrial Zone, Xianqiao Street",
+    "addressLocality": "Jieyang",
+    "addressRegion": "Guangdong",
+    "postalCode": "522000",
+    "addressCountry": "CN"
+  }
+}
+</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #888;
+            --serif: "Times New Roman", "Source Han Serif CN", serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--text); font-family: "Inter", "Helvetica Neue", sans-serif; }
+
+        /* 顶部Logo */
+        nav {
+            padding: 40px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.9);
+            z-index: 1000;
+        }
+        .logo-img { height: 50px; margin-bottom: 10px; }
+        .logo-text { font-family: var(--serif); font-size: 24px; letter-spacing: 8px; font-weight: bold; }
+
+        .collection-nav { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 23px; font-size: 12px; letter-spacing: 1.4px; }
+        .collection-nav a { color: #555; text-decoration: none; padding: 8px 0; border-bottom: 1px solid transparent; }
+        .collection-nav a:hover { color: #111; border-bottom-color: #111; }
+        .collection-nav a:focus-visible { outline: 2px solid #555; outline-offset: 5px; }
+        .collection-nav span { color: #bbb; }
+        @media(max-width: 480px) { .collection-nav { gap: 16px; font-size: 11px; letter-spacing: 1px; } }
+        /* 杂志风叙事布局 */
+        .story-container { padding: 100px 10%; }
+        
+        .section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 180px; /* 巨大的间距产生高级感 */
+            gap: 10%;
+        }
+
+        /* 奇数行：左图右诗 */
+        .section:nth-child(odd) { flex-direction: row; }
+        /* 偶数行：右图左诗 */
+        .section:nth-child(even) { flex-direction: row-reverse; }
+
+        .image-box { flex: 1.2; overflow: hidden; }
+        .image-box img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            transition: 1.5s ease;
+        }
+        .image-box:hover img { transform: scale(1.03); }
+
+        .text-box { flex: 1; padding: 40px; }
+        .poem-en { 
+            font-family: var(--serif); 
+            font-size: 28px; 
+            line-height: 1.4; 
+            font-style: italic; 
+            margin-bottom: 20px; 
+            color: #333;
+        }
+        .poem-zh { 
+            font-size: 14px; 
+            letter-spacing: 3px; 
+            color: var(--accent); 
+            font-weight: 300;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .section, .section:nth-child(even) { flex-direction: column; margin-bottom: 80px; }
+            .text-box { padding: 30px 0; text-align: center; }
+            .poem-en { font-size: 22px; }
+            .story-container { padding: 50px 8%; }
+        }
+
+        /* 联系信息卡片 */
+        html { scroll-behavior: smooth; }
+        #contact { scroll-margin-top: 160px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        .contact-final {
+            background: #fcfcfc;
+            padding: 100px 10%;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        .contact-final h2 { font-family: var(--serif); font-size: 36px; margin-bottom: 30px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; }
+        .addr-text { font-size: 14px; color: #666; line-height: 2; }
+
+        footer { padding: 60px; text-align: center; font-size: 10px; color: #ccc; letter-spacing: 2px; }
+        .contact-shortcuts {
+            position: fixed;
+            right: max(24px, env(safe-area-inset-right));
+            top: max(24px, env(safe-area-inset-top));
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            width: 280px;
+            justify-content: flex-end;
+        }
+        .journal-entry { flex-basis: 100%; text-align: right; color: #555; font-size: 12px; padding: 7px 2px; text-decoration: none; }
+        .journal-entry:hover { text-decoration: underline; }
+        .journal-entry:focus-visible { outline: 2px solid #128c7e; outline-offset: 3px; }
+        .whatsapp-contact {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            padding: 6px 12px;
+            border: 1px solid #dededb;
+            border-radius: 999px;
+            background: rgba(255,255,255,.96);
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.4;
+            box-shadow: 0 2px 10px rgba(0,0,0,.04);
+        }
+        .whatsapp-contact:first-child { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+        .whatsapp-contact strong { font-weight: 500; }
+        .whatsapp-contact small { display: none; }
+        .whatsapp-contact:hover { background: #eee; color: #1a1a1a; }
+        .whatsapp-contact:focus-visible { outline: 3px solid #128c7e; outline-offset: 4px; }
+        @media (max-width: 768px) {
+            .contact-shortcuts { top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); gap: 6px; width: min(280px, calc(100vw - 24px)); }
+            .journal-entry { flex-basis: 100%; text-align: right; color: #555; font-size: 12px; padding: 7px 2px; text-decoration: none; }
+        .journal-entry:hover { text-decoration: underline; }
+        .journal-entry:focus-visible { outline: 2px solid #128c7e; outline-offset: 3px; }
+        .whatsapp-contact { min-height: 44px; padding: 6px 10px; font-size: 11px; }
+            nav { padding-top: 108px; }
+        }
+    </style>
+    <script defer src="assets/analytics.js"></script>
+</head>
+<body>
+
+<nav>
+    <img src="images/image.png" class="logo-img" alt="WOOOHU">
+    <div class="logo-text">WOOOHU·高美伦</div>
+    <div class="collection-nav" aria-label="Explore WOOOHU"><a href="new-arrivals/">New Arrivals</a><span aria-hidden="true">·</span><a href="blog/">Notes on Feet</a></div>
+</nav>
+
+<div class="story-container" id="story-grid">
+    </div>
+
+<section class="contact-final" id="contact">
+    <h2>Connect & Visit</h2>
+    <div class="contact-grid">
+        <div>
+            <p style="font-weight: bold; margin-bottom: 10px;">GLOBAL CONTACT</p>
+            <p class="addr-text">
+                WeChat/WhatsApp: +86 136 1299 3822<br>
+                Email: <a href="mailto:boehnerhuang@gmail.com">boehnerhuang@gmail.com</a>
+            </p>
+        </div>
+        <div>
+            <p style="font-weight: bold; margin-bottom: 10px;">HEADQUARTERS</p>
+            <p class="addr-text">
+                广东省揭阳市榕城区仙桥街道淇美工业区高美伦鞋业<br>
+                Qimei Industrial Zone, Jieyang, Guangdong, China
+            </p>
+        </div>
+        <div>
+            <p style="font-weight: bold; margin-bottom: 10px;">COOPERATION</p>
+            <p class="addr-text">
+                以上仅为部分款式预览，欢迎联系索取完整画册或到厂参观。<br>
+                Contact us for full catalog or factory visit appointments.
+            </p>
+        </div>
+    </div>
+</section>
+<section id="about-craft" style="padding: 120px 8%; background-color: #fcfcfc; color: #555; border-top: 1px solid #f0f0f0;">
+    <div style="max-width: 850px; margin: 0 auto;">
+        <h4 style="font-family: serif; font-size: 13px; letter-spacing: 4px; color: #1a1a1a; margin-bottom: 40px; text-transform: uppercase; text-align: center;">The Heritage of WOOOHU</h4>
+        <div style="font-size: 14px; line-height: 2.2; text-align: justify; letter-spacing: 0.8px;">
+            Established in <strong>2016</strong> and situated in the core of <strong>Jieyang's premier footwear industry zone</strong>, WOOOHU (Gaomeilun) has dedicated a decade to the art of shoemaking. We specialize exclusively in <strong>stylish women's sandals and fashion slides</strong>, blending the soul of <strong>East Asian minimalist design</strong> with rigorous industrial standards. 
+            <br><br>
+            Over the past 10 years, our focus has remained steadfast: creating footwear that speaks of "Quiet Luxury." From the selection of <strong>premium textures</strong> to the <strong>ergonomic engineering</strong> of every sole, each pair of <strong>mules and sandals</strong> is a testament to our craftsmanship. As a leading <strong>sandals manufacturer</strong>, we offer robust <strong>wholesale</strong> and <strong>bespoke manufacturing services (OEM/ODM)</strong>, empowering global boutique brands and distributors with a unique aesthetic language and reliable Chinese manufacturing excellence.
+        </div>
+    </div>
+</section>
+<footer>
+    &copy; 2026 WOOOHU 高美伦 | FOCUS ON STYLISH WOMEN'S FASHION
+</footer>
+
+<script>
+    // 诗词库
+    const poems = [
+        { en: "To walk in beauty, like the night.", zh: "步履间，尽是夜色之美。" },
+        { en: "Free your steps, find your soul.", zh: "释怀双足，探寻灵魂。" },
+        { en: "Every step is a new beginning.", zh: "每一步，都是全新的序章。" },
+        { en: "Elegance is the only beauty that never fades.", zh: "优雅，是永不褪色的美。" },
+        { en: "Walking with confidence and grace.", zh: "怀揣自信，从容迈步。" },
+        { en: "The world is at your feet.", zh: "世界，就在你脚下。" },
+        { en: "Style is a way to say who you are.", zh: "风格，是无需言语的自我介绍。" },
+        { en: "Comfort meets modern aesthetics.", zh: "当舒适邂逅现代美学。" },
+        { en: "Crafted for the sophisticated woman.", zh: "为精致女性倾力打造。" },
+        { en: "Simple details, extraordinary charm.", zh: "简约细节，非凡魅力。" }
+    ];
+
+    const container = document.getElementById('story-grid');
+    
+    // 生成25个部分
+    for (let i = 1; i <= 25; i++) {
+        const poem = poems[(i-1) % poems.length];
+        const section = document.createElement('div');
+        section.className = 'section';
+        
+        section.innerHTML = `
+            <div class="image-box">
+                <img src="images/${i}.jpg" alt="WOOOHU Collection">
+            </div>
+            <div class="text-box">
+                <p class="poem-en">${poem.en}</p>
+                <p class="poem-zh">${poem.zh}</p>
+            </div>
+        `;
+        container.appendChild(section);
+    }
+</script>
+
+<aside class="contact-shortcuts" aria-label="Contact WOOOHU">
+<a class="whatsapp-contact" href="https://wa.me/8613612993822?text=Hi%20WOOOHU%2C%20I%20found%20your%20products%20on%20your%20website.%20Could%20you%20share%20your%20catalog%20and%20wholesale%20information%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat with WOOOHU on WhatsApp (opens in a new tab)"><strong>WhatsApp</strong><small>Chat with us · 联系我们</small></a>
+<a class="whatsapp-contact" href="mailto:boehnerhuang@gmail.com" aria-label="Email WOOOHU at boehnerhuang@gmail.com"><strong>Email</strong><small>Send an inquiry</small></a>
+<a class="whatsapp-contact" href="#contact">Contact us</a>
+
+</aside>
+</body>
+</html>

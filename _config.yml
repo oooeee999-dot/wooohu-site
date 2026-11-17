@@ -21,3 +21,6 @@ exclude:
   - CLOUDFLARE-DEPLOY.md
   - Gemfile
   - Gemfile.lock
+  - home-preview.html
+  - assets/home-preview.css
+  - assets/home-preview.js
