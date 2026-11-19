@@ -1,6 +1,7 @@
 // Local design preview. Reads the same product sources as New Arrivals.
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const root = path.resolve(__dirname, '..');
 const production = process.argv.includes('--publish');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8').replace(/^\uFEFF/, '');
@@ -41,7 +42,8 @@ if (!production) {
   source = source.replace(/<title>[\s\S]*?<\/title>/, '<title>Homepage Preview | WOOOHU</title>');
 }
 const asset = production ? 'home-journal' : 'home-preview';
-source = source.replace('</head>', `<link rel="stylesheet" href="assets/${asset}.css"><script defer src="assets/${asset}.js"></script>\n</head>`);
+const version = extension => crypto.createHash('sha256').update(fs.readFileSync(path.join(root, `assets/${asset}.${extension}`))).digest('hex').slice(0, 12);
+source = source.replace('</head>', `<link rel="stylesheet" href="assets/${asset}.css?v=${version('css')}"><script defer src="assets/${asset}.js?v=${version('js')}"></script>\n</head>`);
 if (!source.includes(header) || !source.includes('<section class="contact-final"')) throw new Error('Page shell was altered');
 const target = production ? 'index.html' : 'home-preview.html';
 fs.writeFileSync(path.join(root, target), source);
